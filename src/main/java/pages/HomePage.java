@@ -9,7 +9,7 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
-    private By inPlayButton = By.xpath("//a[normalize-space()='In-Play']");
+    private By inPlayButton = By.cssSelector(".rd-navbar-main-container a[href='in-play.html']");
 
     public void clickPlayButton() {
         driver.findElement(inPlayButton).click();
