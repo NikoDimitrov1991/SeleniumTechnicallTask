@@ -1,17 +1,21 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
     private WebDriver driver;
     public HomePage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
-    private By inPlayButton = By.cssSelector(".rd-navbar-main-container a[href='in-play.html']");
+    @FindBy(css = ".rd-navbar-main-container a[href='in-play.html']")
+    private WebElement inPlayButton;
 
     public void clickPlayButton() {
-        driver.findElement(inPlayButton).click();
+      inPlayButton.click();
     }
 }
