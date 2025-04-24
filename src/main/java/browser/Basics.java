@@ -8,7 +8,6 @@ public class Basics {
     public static WebDriver driver;
 
     public static void setUp(){
-        // System.setProperty("webdriver.chrome.driver", "C:\\Browser Drivers for Selenium\\chromedriver.exe");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
